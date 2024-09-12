@@ -9,15 +9,15 @@
 <body>
     <h1>Vending Machine</h1>
     <form style="margin-bottom: 10px;">
-        <span>Ones</span><input type="text" name="ones" id="ones" placeholder="0" value="0">
-        <br>
-        <span>Fives</span><input type="text" name="fives" id="fives" placeholder="0" value="0">
-        <br>
-        <span>Nickles</span><input type="text" name="nickles" id="nickles" placeholder="0" value="0">
-        <br>
-        <span>Dimes</span><input type="text" name="dimes" id="dimes" placeholder="0" value="0">
-        <br>
-        <span>Quarters</span><input type="text" name="quarters" id="quarters" placeholder="0" value="0">
+        <span>Ones</span><input type="text" name="ones" id="ones" placeholder="0" value="0" oninput="tally()">
+        <br >
+        <span>Fives</span><input type="text" name="fives" id="fives" placeholder="0" value="0" oninput="tally()">
+        <br >
+        <span>Nickles</span><input type="text" name="nickles" id="nickles" placeholder="0" value="0" oninput="tally()">
+        <br >
+        <span>Dimes</span><input type="text" name="dimes" id="dimes" placeholder="0" value="0" oninput="tally()">
+        <br >
+        <span>Quarters</span><input type="text" name="quarters" id="quarters" placeholder="0" value="0" oninput="tally()">
     </form>
 
     <button value="Coke" id="coke" >Coke</button>
@@ -33,9 +33,9 @@
     <button value="Cheetos" id="cheetos" >Cheetos</button>
     <button value="Lay's Original Chips" id="lay's original chips" >Lay's Original Chips</button>
     <br>
-    <button value="Cancel" id="cancel" >Cancel</button>
+    <button value="Cancel" id="cancel" onclick="cancel()">Cancel</button>
 
-    <h2>Total Entered:  $<span>0.00</span></h2>
+    <h2>Total Entered:  $<span id ="paid">0.00</span></h2>
 
     <h2>Insert money. Select a product</h2>
     
