@@ -20,24 +20,24 @@
         <span>Quarters</span><input type="text" name="quarters" id="quarters" placeholder="0" value="0" oninput="tally()">
     </form>
 
-    <button value="Coke" id="coke" >Coke</button>
-    <button value="Dr Pepper" id="dr pepper" >Dr Pepper</button>
-    <button value="Sprite" id="sprite" >Sprite</button>
-    <button value="Orange Fanta" id="orange fanta" >Orange Fanta</button>
-    <button value="Lemonade" id="lemonade" >Lemonade</button>
-    <button value="Spring Water" id="spring water" style="margin-bottom: 10px;" >Spring Water</button>
+    <button value="Coke" id="coke" onclick="dispenseItem(0)">Coke</button>
+    <button value="Dr Pepper" id="dr pepper" onclick="dispenseItem(1)" >Dr Pepper</button>
+    <button value="Sprite" id="sprite" onclick="dispenseItem(2)">Sprite</button>
+    <button value="Orange Fanta" id="orange fanta" onclick="dispenseItem(3)">Orange Fanta</button>
+    <button value="Lemonade" id="lemonade" onclick="dispenseItem(4)">Lemonade</button>
+    <button value="Spring Water" id="spring water" onclick="dispenseItem(5)" style="margin-bottom: 10px;" >Spring Water</button>
     <br>
-    <button value="Doritos" id="doritos" style="margin-bottom: 10px;">Doritos</button>
-    <button value="BBQ Fritos" id="bbq fritos" >BBQ Fritos</button>
-    <button value="Takis" id="takis" >Takis</button>
-    <button value="Cheetos" id="cheetos" >Cheetos</button>
-    <button value="Lay's Original Chips" id="lay's original chips" >Lay's Original Chips</button>
+    <button value="Doritos" id="doritos" onclick="dispenseItem(6)"style="margin-bottom: 10px;">Doritos</button>
+    <button value="BBQ Fritos" id="bbq fritos" onclick="dispenseItem(7)" >BBQ Fritos</button>
+    <button value="Takis" id="takis" onclick="dispenseItem(8)">Takis</button>
+    <button value="Cheetos" id="cheetos" onclick="dispenseItem(9)">Cheetos</button>
+    <button value="Lay's Original Chips" id="lay's original chips" onclick="dispenseItem(10)">Lay's Original Chips</button>
     <br>
     <button value="Cancel" id="cancel" onclick="cancel()">Cancel</button>
 
     <h2>Total Entered:  $<span id ="paid">0.00</span></h2>
 
-    <h2>Insert money. Select a product</h2>
+    <h2 id= "message">Insert money. Select a product</h2>
     
     <script src="vendingLogic.js"> </script>
 </body>

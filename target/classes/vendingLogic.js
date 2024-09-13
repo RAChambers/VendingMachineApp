@@ -1,7 +1,13 @@
 var moneyInserted = 0;
 var change = 0;
+var msg = "";
+var message = document.getElementById("message");
 
-totalPaid = 0;
+var items = ["Coke", "Dr Pepper", "Sprite", "Orange Fanta", "Lemonade","Spring Water", "Doritos", "BBQ Fritos", "Takis", "Cheetos","Lay's Original Chips"];
+const price = 1.5;
+
+var totalPaid = 0;
+
 
 const currency_one = 1;
 const currency_five = 5;
@@ -59,9 +65,56 @@ function clearForm(){
 
 }
 function cancel(){
+    getTotal();
+
+    if(totalPaid > 0){
+        msg = "Transaction cancelled. $" + totalPaid.toFixed(2) + " has been returned.";
+    
     clearForm();
     clearTally();
+
+    message.innerHTML = msg;
    
+}else if (totalPaid == 0){
+
+    msg = "Insert money. Select a product";
+
+    message.innerHTML = msg;
+    }
+}
+
+function calculateChange(){
+
+    var changeEntered = 0;
+
+    if(getTotal != 0){
+        return (changeEntered = (getTotal() - price).toFixed(2));
+    }
+    return changeEntered.toFixed(2);
+
+}function dispenseItem(item) {
+    message.innerHTML = "";
+    change = 0;
+
+    var selectedItem = items[item];
+
+    change = calculateChange();
+
+    if (change < 0){
+        msg = "You have not inserted enough money. $" + totalPaid.toFixed(2) + " has been returned. Check the coin return."
+        totalPaid = 0;
+        change = 0;
+        clearForm();
+        clearTally();
+        message.innerHTML = msg;
+    } else if (change > 0){
+        msg = selectedItem + " has been dispensed. $" + change + " has been returned."
+        totalPaid = 0;
+        change = 0;
+        clearForm();
+        clearTally();
+        message.innerHTML = msg;
+    }
 }
 
 
