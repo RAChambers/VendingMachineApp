@@ -1,2 +1,2 @@
 # VendingMachineApp
-Simple vending machine application
+Vending machine application to satisfy your digital sweet tooth
