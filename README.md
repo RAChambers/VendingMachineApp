@@ -1,2 +1,2 @@
 # VendingMachineApp
-Vending machine application to satisfy your digital sweet tooth
+Vending machine application created with java, javaScript and HTML
